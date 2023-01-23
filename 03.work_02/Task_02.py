@@ -12,10 +12,15 @@
 # print()
 # print(f'Колличество цифр в списке = {count}')
 #_______________________________________________________________       
-
-a = ["sr","ere",12,"wewe"]
+list = ['re','2','er','45','6','1','jfd','w4f','21']
 n = int(input())
-if n in a:
-    print(a.index(n))
-else:
-    print(-1)
+for i in list:
+    if i.isdigit() and int(i) == n:
+        print(list.index(i))
+#_______________________________________________________________        
+# a = ["sr","ere",12,"wewe"]
+# n = int(input())
+# if n in a:
+#     print(a.index(n))
+# else:
+#     print(-1)

@@ -12,3 +12,8 @@ for index, value in enumerate(A):
     value[index] = 0
 print(A)
 
+for indx,val in enumerate(A):
+    for indx2,val2 in enumerate(val):
+        if indx == indx2:
+            val[indx2] = 0
+print(A)

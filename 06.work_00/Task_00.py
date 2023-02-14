@@ -29,7 +29,12 @@
 # r = sorted(a,key = lambda x:x[0])
 # print(r)
 # #____________________________
-a = {4:'as',2:'bd',3:'ve'}
+# a = {4:'as',2:'bd',3:'ve'}
 
-r = sorted(a.keys())
+# r = sorted(a.keys())
+# print(r)
+# #____________________________
+a = [(2,5,3),(7,4,3),(1,9,5)]
+
+r = sorted(a, key = lambda x:x[0])
 print(r)

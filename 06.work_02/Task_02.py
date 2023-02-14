@@ -13,19 +13,20 @@
 # 1 3 6 5 4 2
 # Программа должна вывести все элементы отсортированного массива в одну строку, разделив их пробелами.
 # lambda, filter
-import random 
-a = int(input("Write size of massive: "))
-arr = []
-for i in range(a):
-    arr.append(random.randint(0,1001))
-print(arr)
 
-dict = list(enumerate(arr))
+a = [3, 1, 2, 5, 4, 6]
+print(a)
+h = [1 if i%2==0 else 0 for i in a]
+print(h)
+even = [i for i in a if i%2==0]
+odd = [i for i in a if i%2!=0]
+even.sort(reverse= True)
+odd.sort()
 
-print(dict)
-odd = list(filter(lambda v: not v[1]%2==0,dict))
-odd = sorted(odd , key = lambda v:v[1])
-even = list(filter(lambda v: v[1]%2==0, dict))
-even = sorted(even, key = lambda v: v[1],reverse=True)
-
-print(odd,even)
+for index,value in enumerate(h):
+    if value == 1:
+        h[index] = even.pop(0) 
+    else:
+        h[index] = odd.pop(0)
+        
+print(h)
